@@ -1,13 +1,14 @@
-from zope.interface import Interface, Attribute
-from guillotina.fields import CloudFileField
-from guillotina.schema.interfaces import IObject
 from guillotina import schema
+from guillotina.fields import CloudFileField
 from guillotina.schema.interfaces import IField
+from guillotina.schema.interfaces import IObject
+from zope.interface import Attribute
+from zope.interface import Interface
 
 
 class INumPyData(Interface):
 
-    value = Attribute('Real value')
+    value = Attribute("Real value")
 
 
 class INumPyArrayField(IField):
@@ -21,16 +22,8 @@ class IModelField(IObject):
 class IModelFieldSchema(Interface):
     """Model field schema"""
 
-    type_model = schema.ASCII(
-        title='Type of model',
-        default='tf'
-    )
+    type_model = schema.ASCII(title="Type of model", default="tf")
 
-    file = CloudFileField(
-        title='Model binary file'
-    )
+    file = CloudFileField(title="Model binary file")
 
-    version = schema.Int(
-        title='Version of the model',
-        default=1
-    )
+    version = schema.Int(title="Version of the model", default=1)

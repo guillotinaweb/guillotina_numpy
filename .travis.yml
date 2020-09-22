@@ -27,7 +27,6 @@ install:
   - pip install -r requirements-test.txt
 script:
   - flake8 guillotina_numpy --config=setup.cfg
-  - mypy guillotina_numpy/
   - isort -c -rc guillotina_numpy/
   - black --check --verbose guillotina_numpy
   - pytest -rfE --reruns 2 --cov=guillotina_numpy -s --tb=native -v --cov-report term-missing --cov-append guillotina_numpy
