@@ -2,7 +2,6 @@ from guillotina import configure
 from guillotina.content import Item
 from guillotina.content import load_cached_schema
 from guillotina.db import ROOT_ID
-from guillotina.tests import utils
 from guillotina.tests.utils import ContainerRequesterAsyncContextManager
 from guillotina.transactions import transaction
 from guillotina.utils import apply_coroutine
